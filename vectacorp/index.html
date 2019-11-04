@@ -13,10 +13,15 @@
 	<![endif]-->
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
-	<script>
+	<script>		
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+			configureTooltips();
+			$('#tabs').tabs();
+			$( "#accordion" ).accordion();
 		});
 	</script>
 </head>
@@ -48,13 +53,39 @@
 		
 		<section id="solutions" class="six columns">
 			<h4>Our Solutions</h4> 
-			
-			<!-- INSERT TABS HERE -->
-		</section>
-		
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">vProspect 2.0</a></li>
+					<li><a href="#tabs-2">vConvert 2.0</a></li>
+					<li><a href="#tabs-3">vRetain 1.0</a></li>
+				</ul>
+				<div id="tabs-1">						
+					<p><img src="images/logo_vprospect.gif" width="63" height="36" style="float:left;"></img>Define and research your target audience, define your strategy to reach that audience and present a strong and memorable brand to that audience.</p>					
+				</div>
+				<div id="tabs-2">
+					<p><img src="images/logo_vconvert.gif" width="63" height="36" style="float:left;"></img>Create a highly user-friendly and easy-to-navigate information architecture that will help your prospects interact with the company on a highly interactive level.</p>					
+				</div>
+				<div id="tabs-3">
+					<p><img src="images/logo_vretain.gif" width="63" height="36" style="float:left;"></img>Build on existing customer relationships to improve productivity and maximize customer loyalty, while growing revenues.</p>					
+				</div>
+			</div>			
+		</section>		
 		<section id="testimonials" class="five columns">
 			<h4>Client Testimonials</h4>
-
+			<div id="accordion">
+				<h4>Iona Ford , President, Chevy Dealers Association</h4>
+				<div>
+					<blockquote>
+						Throughout the years we have worked with Vecta Corporation, we have always been amazed at the level of dedication and professionalism that they have provided us and our WGDC products. It is this commitment that has increased both our income and exposure exponentially.
+					</blockquote>
+				</div>
+				<h4>Robin Banks, CEO, Profits Financial, Inc.</h4>
+				<div>
+					<blockquote>
+						Incredible results from an incredible effort by the Vecta Corporation team! We are very pleased with the business benefits we have rceived by working with them.
+					</blockquote>
+				</div>
+			</div>
 			<!-- INSERT ACCORDION HERE -->
 		</section>
 	</main>

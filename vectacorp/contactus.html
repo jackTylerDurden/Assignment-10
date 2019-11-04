@@ -13,10 +13,17 @@
 	<![endif]-->
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+			configureTooltips();
+			$("input[type='checkbox']" ).checkboxradio();
+			$("input[type='radio']" ).checkboxradio();
+			$("select").selectmenu();
+			$("input[type='submit']").button();
 		});
 	</script>
 </head>
@@ -45,38 +52,36 @@
 			<form name="contactform" action="http://www.vectacorp.com/vc/scripts/contactus.asp" method="post">
 				<fieldset>
 			    <legend>Contact a Sales Representative</legend>
-			    Name:
+			    <label for="name">Name:</label>
 			    <input type="text" name="name" maxlength="30" required="">
-			    Company Name:
+			    <label for="companyname">Company Name:</label>
 			    <input type="text" name="companyname" maxlength="30" required="">
-			    Phone:
+			    <label for="phonenumber">Phone:</label>
 			    <input type="tel" name="phonenumber" maxlength="25" required="" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format: 555-555-5555">
 			    
-			    Email:
+			    <label for="email">Email:</label>
 				<input type="email" name="email" maxlength="30" required="">
 			   
-                What VectaCorp products are you interested in?<br>
+                <label for="product">What VectaCorp products are you interested in ?</label>
 			    <label for="vProspect"><input type="checkbox" name="product" value="vProspect" id="vProspect">vProspect 2.0</label>
 			    <label for="vConvert"><input type="checkbox" name="product" value="vConvert" id="vConvert">vConvert 2.0</label>
-			    <label for="vRetain"><input type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>
-			    
-			    <br>
-			    What is your current infrastructure?<br>
+			    <label for="vRetain"><input type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>			    
+			    <br><br>
+			    <label for="infrastructure">What is your current infrastructure?</label>
 			    <label for="Mac"><input type="radio" name="infrastructure" value="Mac" id="Mac">Mac</label>
 			    <label for="Linux"><input type="radio" name="infrastructure" value="Linux" id="Linux">Linux</label>
 			    <label for="Unix"><input type="radio" name="infrastructure" value="Unix" id="Unix">Unix</label>
 			    <label for="Windows"><input type="radio" name="infrastructure" value="Windows" id="Windows">Windows</label>
-
-			    <br>
-			    How many employees do you have?
+			    <br><br>
+			    <label for="companysize">How many employees do you have?</label>
 			    <select name="companysize">
                     <option value="1-10">1-10</option>
                     <option value="11-100">11-100</option>
                     <option value="101-1000">101-1000</option>
                     <option value="More than 1000">More than 1000</option>
 		        </select>
-                
-			    How did you hear about us?
+                <br><br>
+			    <label for="hearaboutus">How did you hear about us ?</label>
 			    <select name="hearaboutus" multiple="" size="5">
                     <option value="Magazine Ad">Magazine Ad</option>
                     <option value="Radio Ad">Radio Ad</option>
@@ -84,8 +89,8 @@
                     <option value="Word of Mouth">Word of Mouth</option>
                     <option value="Other">Other</option>
 		        </select>
-                
-			    Questions or comments for our sales representatives?
+                <br><br>
+			    <label for="questions">Questions or comments for our sales representatives?</label>
 			    <textarea name="questions" size="30" rows="5"></textarea>
 			    <input type="submit" name="submit" value="Submit Now">
 		    	</fieldset>

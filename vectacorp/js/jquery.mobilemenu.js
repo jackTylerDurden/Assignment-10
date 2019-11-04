@@ -258,5 +258,12 @@
 		}
 				
 	};//mobileMenu()
-	
 })(jQuery);
+
+var configureTooltips = function(){
+	$('a[href="index.html"]').attr("title","Click here for the overview").tooltip({track:true});
+	$('a[href="aboutus.html"]').attr("title","Click to find more about us").tooltip({track:true});
+	$('a[href="solutions.html"]').attr("title","Vecta Corp. offers 3 solutions for prospecting, converting, and retaining customers.").tooltip({track:true});
+	$('a[href="support.html"]').attr("title","Click to find more about support").tooltip({track:true});
+	$('a[href="contactus.html"]').attr("title","Click here for contact details").tooltip({track:true});
+}
