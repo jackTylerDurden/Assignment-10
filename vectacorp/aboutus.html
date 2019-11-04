@@ -13,7 +13,7 @@
 	<![endif]-->
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="js/cycle2.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
@@ -74,42 +74,47 @@
 					<li><a href="#tabs-4">Mike</a></li>
 					<li><a href="#tabs-5">Wilbur</a></li>
 				</ul>
-				<div id="tabs-1">					
+				<div id="tabs-1">
+					<h4>Vice President, Accounting</h4>
 					<p>With over 14 years of public accounting and business advisory service experience in the Tongas, Ecuador, Canada, Botswana and the US, Agnes is the most seasoned and diversed member of the Vecta Corp. team.</p>
 				</div>
-				<div id="tabs-2">					
+				<div id="tabs-2">
+					<h4>Director of Development</h4>
 					<p>Damon is the Director of Development for Vecta Corp. Damon creates learning materials for Vecta Corp. as well as consulting for customers to integrate vSolutions into their production pipeline and business processes. Vecta Corp. is creating the next revolution of digital media applications that incorporates 2D, 3D, sound, and video into a single multimedia presentations that can be distributed on the Web, CD/DVD-ROM, Kiosks, or intranet environments.</p>
 				</div>
-				<div id="tabs-3">					
+				<div id="tabs-3">
+					<h4>Director of Human Resources</h4>		
 					<p>Herbert joined Vecta Corp. in October 1999 as Vecta Corp's first Human Resources Director. As such, he has overall human resources responsibility for Vecta Corp's operations worldwide and is based at the company's global headquarters in San Diego. Although responsible for Vecta Corp's human resources strategies globally, Herbert's work is directly focused on assuring complete employee satisfaction and loyalty.</p>
 				</div>
 				<div id="tabs-4">					
+					<h4>Vice President, Sales and Marketing</h4>		
 					<p>Mike serves as the Vice President of Sales and Marketing for Vecta Corp. In this role Mike oversees Vecta Corp's marketing and corporate communications efforts worldwide. Mike joined Vecta Corp. in early 1998 and worked in business development roles prior to being assigned to lead Vecta Corp's global vSolutions sales and marketing team in the summer of 2000. He initiated Vecta Corp's global branding and marketing campaigns as vSolutions global director and then Vice President of Marketing. In 2001, his role expanded to include overall responsibility for corporate marketing, sales, and communications.</p>
 				</div>
-				<div id="tabs-5">						
+				<div id="tabs-5">				
+					<h4>Founder and CEO</h4>
 					<p>While Wilbur is the founder and CEO of Vecta Corp, he is primarily known for being the pioneer and world leader of creating vSolutions. Wilbur has led the commercialization of vSolution technology and its success as the world's fastest-growing, most advanced technologies in its respective industry. Now used by tens of millions of consumers worldwide, vSolutions have been the technology of choice for governments and private organizations for nearly a decade.</p>
 				</div>
 			</div>
             <br>
             <h4>Our New Headquarters</h4>
             
-			<!-- INSERT CYCLE 2 HERE -->			
-				<div style="text-align: center;">
-					<span class="navButtons" id=prev>&lt;&lt;Prev </span>
-					<span class="navButtons" id=next> Next&gt;&gt;</span>
-				</div>					
+			<!-- INSERT CYCLE 2 HERE -->							
 				<div class="cycle-slideshow" 
-					data-cycle-fx=scrollHorz
-					data-cycle-timeout=0
+					data-cycle-fx="scrollHorz"
+					data-cycle-timeout="3000"
 					data-cycle-prev="#prev"
 					data-cycle-next="#next"
-					>
+					data-cycle-caption-template="Slide {{slideNum}}: {{cycleTitle}}">					
 					<img src="images/building_01.jpg" class="scale-with-grid" alt="">
 					<img src="images/building_02.jpg" class="scale-with-grid" alt="">
 					<img src="images/building_03.jpg" class="scale-with-grid" alt="">
 					<img src="images/building_04.jpg" class="scale-with-grid" alt="">
 					<img src="images/building_05.jpg" class="scale-with-grid" alt="">
-				</div>			
+				</div>
+				<div>
+					<a href="#" class="navButtons" id=prev>Prev </a>
+					<a href="#" class="navButtons" id=next>Next</a>
+				</div>
         </section>
 		
 		<section id="testimonials" class="five columns">
